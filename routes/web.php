@@ -3,6 +3,8 @@
 use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Pustakawan\BiodataController;
+use App\Http\Controllers\Pustakawan\PengajuanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,4 +45,6 @@ Route::middleware('auth', 'cekRole:Administrator')->group(function () {
 });
 
 Route::middleware('auth', 'cekRole:Pustakawan')->group(function () {
+    Route::auto('pustakawan/biodata', BiodataController::class);
+    Route::auto('pustakawan/pengajuan', PengajuanController::class);
 });

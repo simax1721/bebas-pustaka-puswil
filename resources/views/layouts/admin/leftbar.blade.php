@@ -34,8 +34,8 @@
           
             <li class="nav-item">
               <a class="nav-link" href="{{ url('/administrator/users') }}">
-                <i class="fa-solid fa-user-gear"></i>
-                  <span>User</span></a>
+                <i class="fa-solid fa-users"></i>
+                  <span>Users</span></a>
             </li>
 
         <hr class="sidebar-divider d-none d-md-block">
@@ -71,6 +71,11 @@
 
   </ul>
 @endif
+
+@php
+    use App\Models\Biodatapustakawan;
+    $cekbiodata = count(Biodatapustakawan::where('users_id', '=', Auth::user()->id)->get());
+@endphp
 
 @if(Auth::user()->userroles_id == 2)
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -109,7 +114,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ url('profil') }}">
                 <i class="fa-solid fa-user-gear"></i>
-                  <span>Profil</span></a>
+                  <span>Profil Akun</span></a>
             </li>
 
         <hr class="sidebar-divider d-none d-md-block">
@@ -120,16 +125,20 @@
           <!-- Nav Item -->
           
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/admin/user') }}">
-              <i class="fa-solid fa-user-gear"></i>
+            <a class="nav-link" href="{{ url('/pustakawan/biodata') }}">
+              <i class="fa-solid fa-user-pen"></i>
                 <span>Biodata</span></a>
           </li>
-          
+
+          @if ($cekbiodata == 0)
+              <div></div>
+          @else
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/admin/user') }}">
-              <i class="fa-solid fa-user-gear"></i>
+            <a class="nav-link" href="{{ url('/pustakawan/pengajuan') }}">
+              <i class="fa-solid fa-envelope-open-text"></i>
                 <span>Ajukan Bebas Pustaka</span></a>
           </li>
+          @endif
           
 
           <hr class="sidebar-divider d-none d-md-block">

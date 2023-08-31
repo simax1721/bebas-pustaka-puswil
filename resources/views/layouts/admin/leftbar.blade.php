@@ -46,13 +46,13 @@
           <!-- Nav Item -->
           
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/admin/user') }}">
+            <a class="nav-link" href="{{ url('/administrator/pengajuan') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Pengajuan</span></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/admin/user') }}">
+            <a class="nav-link" href="{{ url('/administrator/rekap') }}">
               <i class="fa-solid fa-table"></i>
                 <span>Rekap</span></a>
           </li>

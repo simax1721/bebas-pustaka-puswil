@@ -62,7 +62,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; HIMA-TI 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script></span>
+            <span>Copyright &copy; Pustaka Wilayah 2023 - <script>document.write(/\d{4}/.exec(Date())[0])</script></span>
           </div>
         </div>
       </footer>

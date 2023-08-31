@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Administrator\UsersController;
+use App\Http\Controllers\Administrator\PengajuanController as AdministratorPengajuanController;
+use App\Http\Controllers\Administrator\RekapController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Pustakawan\BiodataController;
@@ -42,6 +44,8 @@ require __DIR__ . '/auth.php';
 
 Route::middleware('auth', 'cekRole:Administrator')->group(function () {
     Route::auto('/administrator/users', UsersController::class);
+    Route::auto('/administrator/pengajuan', AdministratorPengajuanController::class);
+    Route::auto('/administrator/rekap', RekapController::class);
 });
 
 Route::middleware('auth', 'cekRole:Pustakawan')->group(function () {

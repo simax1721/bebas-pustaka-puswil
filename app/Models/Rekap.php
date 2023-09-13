@@ -10,4 +10,9 @@ class Rekap extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function biodatapustakawan()
+    {
+        return $this->belongsTo(Biodatapustakawan::class, 'biodatapustakawans_id');
+    }
 }

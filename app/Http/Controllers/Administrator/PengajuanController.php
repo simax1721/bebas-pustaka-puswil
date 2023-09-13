@@ -52,9 +52,9 @@ class PengajuanController extends Controller
         // dd(boolval($request->status_cetak));
 
         if ($request->status_cetak == '0') {
-            return "ini halaman yang diprint";
+            return redirect('/administrator/print/latest');
         } else {
-            return redirect('/adminstrator/pengajuan/')->with('warning', 'sementara dikembalikan kesini');
+            return redirect('/administrator/rekap/');
         }
     }
 
@@ -86,7 +86,7 @@ class PengajuanController extends Controller
                 ->addColumn('action', function ($data) {
                     // return $data->a;
                     return '<div style="display: inline-flex;" class="">
-                        <a href="' . url('') . '/administrator/pengajuan/print/' . $data->id . '" class="btn btn-primary btn-sm mr-3"><i class="fa-solid fa-print"></i></a> 
+                        <a target="_blank" href="' . url('') . '/administrator/pengajuan/print/' . $data->id . '" class="btn btn-primary btn-sm mr-3"><i class="fa-solid fa-print"></i></a> 
                         <a href="' . url('') . '/administrator/pengajuan/delete/' . $data->id . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                         </div>';
                 })

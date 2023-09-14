@@ -9,7 +9,7 @@ buka terminal, ketik perintah berikut
 
 > code .
 
-ubah file .env.example ke .env
+ubah nama file .env.example ke .env
 
 kembali ke terminal
 > php artisan migrate

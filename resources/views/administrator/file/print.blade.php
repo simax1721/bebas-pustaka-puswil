@@ -43,8 +43,8 @@
         {{-- <div class="garis tipis"></div> --}}
         <p style="font-weight: bold" id="cop_alamat">Jln. T. NyakArief Telepon: (0651) 7552323 Faximile: (0651) 7551951 Banda Aceh</p>
         <p style="font-weight: bold; margin-top: 30px;" id="cop_alamat">Website : arpus.acehprov.go.id E-mail : <span style="text-decoration: underline">arpus@acehprov.go.id</span></p>
-        {{-- <div class="garis tebal" style="margin-top: -5px;"></div>
-        <div class="garis tipis" style="margin-top: 2px;"></div> --}}
+        <div class="garis tebal" style="margin-top: -5px;"></div>
+        <div class="garis tipis" style="margin-top: 2px;"></div>
 
         {{-- judul dan nomor surat --}}
         <div class="container">
